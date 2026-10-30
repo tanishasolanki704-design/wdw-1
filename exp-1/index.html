@@ -2,79 +2,174 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Course Curriculum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily News Portal</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Header & Navigation Bar */
+        header {
+            background-color: #1a252f;
+            color: #ffffff;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #f39c12;
+        }
+
+        /* Main Container Layout */
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        section {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        /* Image Styling */
+        .news-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* Video Container (Responsive iFrame) */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #1a252f;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
-    <h2>Introduction</h2>
+    <!-- Header Section -->
+    <header>
+        <h1>Global Daily News</h1>
+        <p>Your Trusted Source for Latest Updates</p>
+    </header>
 
-    <p>
-        Welcome to the <b>Course Curriculum</b>.
-        This page demonstrates the use of
-        <i>HTML formatting</i>, <u>lists</u>, and
-        special characters such as &copy;, &lt;, &gt;.
-    </p>
+    <!-- Navigation Menu (Hyperlinks & Navigation Structure) -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#featured">Featured Article</a>
+        <a href="#video-news">Video Coverage</a>
+        <a href="#podcast">Audio Podcast</a>
+        <a href="https://www.bbc.com" target="_blank">External News (BBC)</a>
+    </nav>
 
-    <h2>Semester 1 Subjects (Ordered List)</h2>
-    <ol>
-        <li>Mathematics I</li>
-        <li>Computer Fundamentals</li>
-        <li>Programming in C</li>
-        <li>Electronics Basics</li>
-    </ol>
+    <div class="container">
 
-    <h2>Programming Languages (Unordered List)</h2>
-    <ul>
-        <li>C</li>
-        <li>Java</li>
-        <li>Python</li>
-        <li>JavaScript</li>
-    </ul>
+        <!-- Featured Article Section (Images) -->
+        <section id="featured">
+            <h2>Breaking News: Tech Summit 2026 Announcements</h2>
+            <img src="https://m.media-amazon.com/images/M/MV5BNGYwNDlmZDgtMDg1Yi00N2JmLTk0NzQtNWVkN2NiMTQxY2RlXkEyXkFqcGc@._V1_.jpg" alt="News Image" class="news-img">
+            <p>
+                Today marked the opening of the annual Global Tech Summit. Industry leaders gathered to discuss innovations in AI, renewable energy, and future digital infrastructures.
+            </p>
+            <p>
+                Read more about full global reports at <a href="https://www.bbc.com" target="_blank">Visit BBC News</a>.
+            </p>
+        </section>
 
-    <h2>Course Description (Description List)</h2>
-    <dl>
-        <dt><b>C Programming</b></dt>
-        <dd>Learn basics of C language including loops,
-        arrays, and functions.</dd>
+        <!-- Video News Section (YouTube Embed) -->
+        <section id="video-news">
+            <h2>Live Video Coverage</h2>
+            <p>Watch the embedded video report below:</p>
+            <div class="video-container">
+                <!-- Replace 'dQw4w9WgXcQ' with your desired YouTube Video ID -->
+                <iframe 
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    title="YouTube video player" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
 
-        <dt><b>Java</b></dt>
-        <dd>Introduction to Object-Oriented Programming concepts.</dd>
-    </dl>
+        <!-- Audio Podcast Section (Audio Tag) -->
+        <section id="podcast">
+            <h2>Daily News Podcast</h2>
+            <p>Listen to today's news bulletin on the go:</p>
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
 
-    <h2>Course Modules (Nested List)</h2>
-    <ol>
-        <li>Module 1: Basics
-            <ul>
-                <li>Introduction</li>
-                <li>History of Computers</li>
-            </ul>
-        </li>
-        <li>Module 2: Programming
-            <ul>
-                <li>Variables &amp; Data Types</li>
-                <li>Control Statements</li>
-            </ul>
-        </li>
-    </ol>
+        <!-- Local Video Section (Video Tag) -->
+        <section id="local-video">
+            <h2>Local News Clip</h2>
+            <video width="100%" controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
 
-    <h2>Project Work (Mixed List)</h2>
-    <ul>
-        <li>Web Development
-            <ol>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ol>
-        </li>
-        <li>Database
-            <ol type="A">
-                <li>MySQL</li>
-                <li>MongoDB</li>
-            </ol>
-        </li>
-    </ul>
+    </div>
 
-</body>
-</html>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Daily News Portal. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
